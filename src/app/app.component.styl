@@ -1,0 +1,70 @@
+lightTheme-colorBackground = #f2f4f8;
+DarkTheme-colorBackground= #293145;
+
+.app-body{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-self:flex-start;
+  flex-direction: row;
+  justify-content : flex-start;
+  align-items: stretch;
+
+  background: lightTheme-colorBackground
+  .app-menu{
+    flex: 0 0 260px;
+  }
+
+  .app-content{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-self:flex-start;
+    flex-direction: row;
+    justify-content : flex-start;
+    align-items: stretch;
+
+    .app-header{
+      width: 100%;
+      align-self:flex-start;
+    }
+
+
+    .app-page{
+      flex: 1;
+    }
+
+
+
+    //.sidebar-contents{
+    //  flex: 0 0 400px;
+    //}
+
+
+  }
+
+}
+
+
+.app-toggler-menu{
+  position fixed
+  bottom: 8px;
+  right: 0px;
+  .toggleScheme, .toggleChat{
+    position: relative;
+    z-index: 99;
+    float: left;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+:host-context(.DarkTheme) {
+  .app-body{
+    background: DarkTheme-colorBackground
+  }
+}

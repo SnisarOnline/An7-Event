@@ -1,0 +1,38 @@
+<div class=" login-form">
+
+<mat-tab-group>
+  <mat-tab label="Login">
+        <form (ngSubmit)="login()">
+          <span class="text-danger" *ngFor="let error of errors.non_field_errors">
+            {{ error }}
+          </span>
+          <div class="form-group">
+            <label for="login_username"> Username </label>
+            <span class="text-danger" *ngFor="let error of errors.username"> {{ error }} </span>
+            <input
+              type="text"
+              class="form-control"
+              id="login_username"
+              placeholder="Username"
+              name="username"
+              [(ngModel)]="loginModel.username"
+            >
+          </div>
+          <div class="form-group">
+            <label for="login_password"> Password </label>
+            <span class="text-danger" *ngFor="let error of errors.password"> {{ error }} </span>
+            <input
+              type="password"
+              class="form-control"
+              id="login_password"
+              placeholder="Password"
+              name="password"
+              [(ngModel)]="loginModel.password"
+            >
+          </div>
+          <button type="submit" class="btn btn-success"> Login </button>
+        </form>
+  </mat-tab>
+</mat-tab-group>
+
+</div>

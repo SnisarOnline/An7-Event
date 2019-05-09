@@ -1,0 +1,81 @@
+<p>главная страница всего сайта после регистрации/авторизации </p>
+
+<a routerLink="/auth/logout">
+  <i class="os-icon os-icon-signs-11"></i>
+  <span>Logout</span>
+</a>
+
+<div class="event-table">
+
+  <app-req-ans [title]=" '1) Используется Промежуточный сервис для передачи событий и данных через \'Subject\' ' ">
+    <div class="left">
+      <ev-request-button-subject></ev-request-button-subject>
+    </div>
+    <div class="right">
+      <ev-result-button-subject></ev-result-button-subject>
+    </div>
+  </app-req-ans>
+
+
+  <app-req-ans [title]="'2) event_EventEmitter - Не перспективно, все может изменится' ">
+    <div class="left">
+      <ev-request-eventEmitter></ev-request-eventEmitter>
+    </div>
+    <div class="right">
+      <ev-response-eventEmitter></ev-response-eventEmitter>
+    </div>
+  </app-req-ans>
+
+
+  <app-req-ans [title]=" '3) Используется Промежуточный сервис для передачи события через \'BehaviorSubject\' ' ">
+    <div class="left">
+      <ev-request-tumbler></ev-request-tumbler>
+    </div>
+    <div class="right">
+      <ev-result-tumbler></ev-result-tumbler>
+    </div>
+  </app-req-ans>
+
+
+  <app-req-ans [title]=" '4) Встроенный в Angular \'ViewChild\' для наблюдений за изменениями' ">
+    <div class="left">
+      <ev-request-view-child></ev-request-view-child>
+    </div>
+    <div class="right"></div>
+  </app-req-ans>
+
+
+  <app-req-ans [title]=" '5) Всплытие события от дочерного к родительскому' ">
+    <div class="left"></div>
+    <div class="right">
+      <ev-response-output></ev-response-output>
+    </div>
+  </app-req-ans>
+
+
+  <app-req-ans [title]=" '6) Погружение события от родительского к дочерниму' ">
+    <div class="left">
+      <ev-request-input></ev-request-input>
+    </div>
+    <div class="right"></div>
+  </app-req-ans>
+
+
+  <app-req-ans [title]=" '7) fromEvent  ' ">
+    <div class="left">
+      <ev-request-fromEvent></ev-request-fromEvent>
+    </div>
+    <div class="right">
+      <ev-response-fromEvent></ev-response-fromEvent>
+    </div>
+  </app-req-ans>
+
+
+  <app-req-ans [title]=" '8) Directive + HostListener' ">
+    <div class="left">
+      <ev-directive-hostListener></ev-directive-hostListener>
+    </div>
+    <div class="right"></div>
+  </app-req-ans>
+</div>
+
